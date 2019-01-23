@@ -1,0 +1,3 @@
+- service: atlas_server
+  name: testing
+  command: echo "Hello World!"
