@@ -1,0 +1,23 @@
+version: '3'
+services:
+  atlas:
+    build: .
+    ports:
+    - 57561:57561/udp
+    - 57561:57561
+    - 5761:5761/udp
+    - 5761:5761
+    - 7777:7777/udp
+    - 7777:7777
+    - 7778:7778/udp
+    - 7778:7778
+    - 27015:27015/udp
+    - 27015:27015
+    - 32330:32330
+    volumes:
+    - ./atlasserver:/atlasserver
+    #- logvolume01:/var/log
+    links:
+    - redis
+  redis:
+    image: redis
