@@ -1,0 +1,4 @@
+atlas_server:
+  build:
+    image: atlas
+    dockerfile: dockerfile
